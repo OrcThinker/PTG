@@ -1,0 +1,16 @@
+#+title: PTG
+#+description: Prototype Tetrislike Game. Project made to renew knowledge of SignalR websockets and a reimplementation of a mechanic from a childhood game.
+
+* Game premise
+You have a full "tetris" like cube matrix. You can move the cubes to make certains "signs". Those in turn lead to cubes dissapearing and spell being cast/skill being used
+To go 1 step further I'd like the game to allow more than 1 player
+The game in the beggining would aim to be PvE based. You build your "deck" (signs you can get) before the game.
+Next you go to a dungeon (solo or in party) there you have X lines (X == number of players for dung)
+Each player has to complete their own spells however they have the same enemy
+Also in party you have static signs that allow you to switch with the other player
+
+
+* Prototype (proof of concept)
+- Choose class (2 classes maybe more with static decks)
+- Swap cubes to cast spells
+- 1 enemy / battle
