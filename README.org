@@ -18,5 +18,6 @@ Also in party you have static signs that allow you to switch with the other play
 
 * History of making
 ** Checking out signalR and basic cube swapping
-At start to just see whether it has a chance of working nicely I implemented a simple tetris like board with randomly generated tiles shared between players and allowed each player to swap those tiles
-z[[./OrgFiles/cubeSwap.gif]]
+At start to just see whether it has a chance of working nicely I implemented a simple tetris like board with randomly generated tiles shared between players and allowed each player to swap those tiles.
+Users can also click "Send Message" button to randomize the whole board
+[[./OrgFiles/cubeSwap.gif]]
