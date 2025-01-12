@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using PTG.CubeMatching;
 
 namespace PTG.SignalR.Hubs
 {
@@ -53,6 +54,12 @@ namespace PTG.SignalR.Hubs
             cubesAsList[pos1X][pos1Y] = cubesAsList[pos2X][pos2Y];
             cubesAsList[pos2X][pos2Y] = temp;
             await Clients.All.SendAsync("ReceiveCubes", cubesAsList);
+        }
+        public async Task CheckShape(string user, int posX, int posY)
+        {
+            cubesAsList = CubeBoard.CastCubes(cubesAsList, posX, posY);
+            await Clients.All.SendAsync("ReceiveCubes", cubesAsList);
+            //await Clients.All.SendAsync("ReceiveShape", isCross);
         }
 
         public async Task MoveRect(string user, string direction)

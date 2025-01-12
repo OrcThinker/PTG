@@ -200,6 +200,9 @@ window.addEventListener("keydown", function (event) {
         case " ":
             handleSelect()
             break;
+        case "p":
+            checkShape()
+            break;
         default:
             return; // Quit when this doesn't handle the key event.
     }
@@ -246,6 +249,14 @@ let swapCubes = (selectOneX, selectOneY, selectTwoX, selectTwoY) => {
 
     var user = document.getElementById("userInput").value;
     connection.invoke("SwapCubes", user, selectOneX, selectOneY, selectTwoX, selectTwoY).catch(function (err) {
+        return console.error(err.toString());
+    });
+}
+
+let checkShape = () => {
+
+    var user = document.getElementById("userInput").value;
+    connection.invoke("CheckShape", user, cursorPosX, cursorPosY).catch(function (err) {
         return console.error(err.toString());
     });
 }
